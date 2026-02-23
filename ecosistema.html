@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosistema de Ciberseguridad - Análisis por Casos de Uso</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .case-card { transition: all 0.2s ease-in-out; }
+        .case-card:hover { transform: translateY(-2px); }
+        .active-tab { border-bottom: 3px solid #3b82f6; color: #1e40af; font-weight: bold; }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen font-sans">
+
+    <!-- Cabecera basada en la portada del documento -->
+    <header class="bg-white shadow-md p-6 border-b-4 border-blue-600">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-black text-slate-800 uppercase tracking-tighter">Ecosistema de Ciberseguridad</h1>
+                <p class="text-blue-600 font-medium">Análisis por Casos de Uso (Canarias, España y Europa)</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+                <p class="text-xs text-slate-500 italic">Alejandro Javier Aguiar Pérez</p>
+                <p class="text-xs text-slate-500 font-bold uppercase">Universidad de La Laguna</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+
+        <!-- METODOLOGÍA DEL DOCUMENTO -->
+        <section class="mb-10 bg-blue-50 border border-blue-200 rounded-xl p-6 shadow-sm text-center">
+            <h2 class="text-lg font-bold text-blue-800 mb-4 uppercase">Enfoque Metodológico</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+                <div class="bg-white p-3 rounded-lg shadow-inner border border-blue-100 w-full md:w-auto">¿Quién eres?</div>
+                <div class="text-blue-500 font-bold text-xl">+</div>
+                <div class="bg-white p-3 rounded-lg shadow-inner border border-blue-100 w-full md:w-auto">¿Qué ha ocurrido?</div>
+                <div class="text-blue-500 font-bold text-xl">=</div>
+                <div class="bg-blue-600 text-white p-3 rounded-lg shadow-md font-bold w-full md:w-auto">¿A quién acudir?</div>
+            </div>
+        </section>
+
+        <!-- PANEL DE CASOS DE USO -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- LISTA DE ORGANISMOS SEGÚN NIVEL (Págs 17-25) -->
+            <aside class="lg:col-span-4 space-y-6">
+                <h3 class="font-black text-slate-700 uppercase text-sm border-b pb-2">Agentes del Ecosistema</h3>
+                
+                <!-- NIVEL EUROPA -->
+                <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-indigo-500">
+                    <h4 class="text-xs font-bold text-indigo-600 uppercase mb-2 italic">Europa / Internacional</h4>
+                    <ul class="text-sm space-y-2">
+                        <li class="font-bold">ENISA <span class="text-[10px] font-normal block opacity-70 italic text-slate-600">Recomendaciones técnicas y estándares (Pág 24)</span></li>
+                        <li class="font-bold">ISO / NIST <span class="text-[10px] font-normal block opacity-70 italic text-slate-600">Estándares Internacionales (Pág 25)</span></li>
+                    </ul>
+                </div>
+
+                <!-- NIVEL ESPAÑA -->
+                <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-red-500">
+                    <h4 class="text-xs font-bold text-red-600 uppercase mb-2 italic">España (Cesta de CERTs)</h4>
+                    <ul class="text-sm space-y-2">
+                        <li class="font-bold">INCIBE <span class="text-[10px] font-normal block opacity-70 text-slate-600">Ciudadanía y Entorno Privado (Pág 20)</span></li>
+                        <li class="font-bold">CCN-CERT <span class="text-[10px] font-normal block opacity-70 text-slate-600">Administración Pública (Pág 21)</span></li>
+                        <li class="font-bold">CNPIC / MCCE <span class="text-[10px] font-normal block opacity-70 text-slate-600">Operadores Críticos y Defensa (Pág 22)</span></li>
+                        <li class="font-bold">AEPD <span class="text-[10px] font-normal block opacity-70 text-slate-600">Protección de Datos (Pág 23)</span></li>
+                        <li class="font-bold">Policía / G. Civil <span class="text-[10px] font-normal block opacity-70 text-slate-600">Fuerzas y Cuerpos de Seguridad (Pág 19)</span></li>
+                    </ul>
+                </div>
+
+                <!-- NIVEL CANARIAS -->
+                <div class="bg-white rounded-lg p-4 shadow-sm border-l-4 border-yellow-500">
+                    <h4 class="text-xs font-bold text-yellow-600 uppercase mb-2 italic">Región</h4>
+                    <ul class="text-sm space-y-2">
+                        <li class="font-bold">CyberCan <span class="text-[10px] font-normal block opacity-70 text-slate-600">Hub regional y consultoría local (Pág 26)</span></li>
+                        <li class="font-bold">Consultoras Privadas: PwC / Deloitte / S21 <span class="text-[10px] font-normal block opacity-70 text-slate-600">Asesoría y mitigación para empresas locales</span></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- RESOLUCIÓN POR CASOS DE USO (Págs 6-16) -->
+            <div class="lg:col-span-8 space-y-6">
+                <h3 class="font-black text-slate-700 uppercase text-sm border-b pb-2">Resolución por Casos (Metodología Aguiar)</h3>
+                
+                <!-- CASO 1 -->
+                <div class="case-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 text-white px-4 py-2 text-xs font-bold flex justify-between">
+                        <span>CASO 1: PARTICULAR / RESIDENTE EN ESPAÑA</span>
+                        <span class="text-blue-300">INCIDENTE: PHISHING BANCARIO</span>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-blue-700 text-sm mb-2 italic underline italic">¿A quién acudir?</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-xs font-bold">Policía Nacional / Guardia Civil</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">INCIBE Línea 017</span>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-3 font-semibold">Valor aportado:</p>
+                            <p class="text-xs text-slate-500 italic">Asesoramiento inmediato, contención de incidentes y marco legal para denuncia penal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASO 2 -->
+                <div class="case-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 text-white px-4 py-2 text-xs font-bold flex justify-between">
+                        <span>CASO 2: HOSPITAL / AYUNTAMIENTO MEDIANO</span>
+                        <span class="text-red-300">INCIDENTE: RANSOMWARE / BRECHA DE DATOS</span>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-blue-700 text-sm mb-2 italic underline italic">¿A quién acudir?</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-slate-700 text-white px-2 py-1 rounded text-xs font-bold tracking-widest">CCN-CERT</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">AEPD (Notificación)</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs font-bold">Consultoría Privada (PwC / Deloitte)</span>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-3 font-semibold">Vínculo con Normativa:</p>
+                            <p class="text-xs text-slate-500 italic">ENS, LOPDGDD y cumplimiento de NIS2 para entidades críticas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CASO 3 -->
+                <div class="case-card bg-white rounded-xl shadow border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-800 text-white px-4 py-2 text-xs font-bold flex justify-between">
+                        <span>CASO 3: PYME EN CANARIAS</span>
+                        <span class="text-yellow-300">INCIDENTE: AUDITORÍA / MEJORA DE SEGURIDAD</span>
+                    </div>
+                    <div class="p-5 flex gap-4">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-blue-700 text-sm mb-2 italic underline italic">¿A quién acudir?</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-bold">CyberCan / Cidihub</span>
+                                <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs font-bold">Consultoría Privada PwC / Deloitte / S21</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-bold">INCIBE (Kit Digital / Asesoría)</span>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-3 font-semibold">Valor aportado:</p>
+                            <p class="text-xs text-slate-500 italic">Asesoramiento regional, dinamización local y acceso a fondos nacionales de digitalización.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEYES Y REFERENCIAS (Pág 26) -->
+                <div class="bg-slate-200 p-4 rounded-xl border-t-4 border-slate-400">
+                    <h4 class="text-[10px] font-black uppercase text-slate-600 mb-2 tracking-widest">Marco Regulatorio Citado</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white px-2 py-1 text-[9px] rounded shadow-sm border border-slate-300 font-bold">RGPD / GDPR</span>
+                        <span class="bg-white px-2 py-1 text-[9px] rounded shadow-sm border border-slate-300 font-bold">DIRECTIVA NIS2</span>
+                        <span class="bg-white px-2 py-1 text-[9px] rounded shadow-sm border border-slate-300 font-bold">ENS</span>
+                        <span class="bg-white px-2 py-1 text-[9px] rounded shadow-sm border border-slate-300 font-bold">LOPDGDD</span>
+                        <span class="bg-white px-2 py-1 text-[9px] rounded shadow-sm border border-slate-300 font-bold">LSSI-CE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
